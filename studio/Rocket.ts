@@ -21,6 +21,12 @@ export class Rocket implements Payload{
     sumMass( items: Payload[] ){
         //sumMass( items: Payload[] ): number
         //Returns the sum of all items using each item's massKg property
+        var sum_of_items=0;
+        for (let index = 0; index < items.length; index++) {
+            var item = items[index];
+            sum_of_items+=item.massKg;
+        }
+        return sum_of_items;
      }
      currentMassKg(){
          //currentMassKg(): number
